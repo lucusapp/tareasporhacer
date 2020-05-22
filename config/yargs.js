@@ -20,6 +20,13 @@ const argv = require ('yargs')
                         desc: 'Marca como completado o pendiente la tarea'
                     }
                 })
+                .command('borrar', 'borrado de una tarea',{
+                    descripcion:{
+                        demand:true,
+                        alias: 'd',
+                        desc: 'marca como borrada la tarea'
+                    }
+                })
                 .help()
                 .argv;
 
