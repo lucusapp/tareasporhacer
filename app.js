@@ -13,7 +13,7 @@ switch(comando){
     case'crear':
        let tarea = porHacer.crear(argv.descripcion);
        console.log(tarea)
-    break;
+        break;
     case'listar':
     
     let listado = porHacer.getListado();
@@ -21,14 +21,14 @@ switch(comando){
     for(let tarea of listado){
         console.log('=========Por Hacer====='.green)
         console.log(tarea.descripcion);
-        console.log('Esttado:', tarea.completado);
+        console.log('Estado:', tarea.completado);
         console.log('============='.green)
     }
-
-    break;
+        break;
     case'actualizar':
-    console.log('Actualiza una tarea por hacer');
-    break;
+    let actualizado = porHacer.actualizar(argv.descripcion,argv.completado)
+    console.log(actualizado)
+        break;
 
     default:
     console.log('Comando no es reconocido')
